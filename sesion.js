@@ -38,7 +38,8 @@ function existToken() {
 }
 
 function showUsername() {
-   const strong = document.querySelector("#usernameLogin");
-   const token = JSON.parse(localStorage.getItem("token"));
-   strong.innerHTML = token.username;
+const strong = document.querySelector("#usernameLogin");
+const token = JSON.parse(localStorage.getItem("token"));
+strong.innerHTML = token.username;
+
 }
