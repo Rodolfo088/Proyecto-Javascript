@@ -21,7 +21,6 @@
 
     <h1>BASE DE DATOS DE PACIENTES</h1>
 
-  </header>
   <!-- ingreso sesion de doctores -->
   <form id="login">
       <div class="field">
@@ -43,118 +42,24 @@
         console.log("El Doctor a Iniciado Sesion")
         console.log(new Date())
       }
-     </script>
-   
-    </form> 
-    <div class="showContent" id="privateContent">
-      <br>
 
       
-         
-        <button
-          type="button"
-          class="btn btn-primary"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-        >
-          Agregar Paciente
-        </button>
+     </script>
+     <div class="showContent" id="privateContent">
+      <br>
+    </header>     
+          <body>
 
-        <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Agregar Paciente
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form id="addPatient">
-                  <div class="field">
-                    <label for="PatientName"> Nombre </label>
-                    <input type="text" placeholder="Nombre" name="PatientName" />
-                  </div>
-                  <div class="field">
-                    <label for="PatientAge"> Edad </label>
-                    <input 
-                    type="number" 
-                    placeholder="Edad" 
-                    name="PatientAge" 
-                    />
-                  </div>
-                  <div class="field">
-                    <label for="PatientPhone"> Telefono </label>
-                    <input 
-                    type="text" 
-                    placeholder="Telefono" 
-                    name="PatientPhone" 
-                    />
-                  </div>
-                  <div class="field">
-                    <label for="PatientRecord"> Historial </label>
-                    <input
-                      type="text"
-                      placeholder="Historia del Paciente"
-                      name="PatientRecord"
-                    />
-                  </div>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Cerrar
-                </button>
-                <button
-                  type="button"
-                  class="btn btn-primary"
-                  onclick="savePatient()"
-                >
-                  Guardar
-                </button>
-              </div>
+
+            <div class="button-home">
+              <a href="./vista/Historial.html"><button type="button"> Historial de Pacientes</button></a>
             </div>
-          </div>
-        </div>
-       
-        <!-- Tabla de pacientes -->
-        <table class="table" id="patientTable">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Edad</th>
-              <th scope="col">Telefono</th>
-              <th scope="col">Historial</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </h2>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
-      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
-      crossorigin="anonymous"
-    ></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="index.js"></script>
+            <div class="button-home">
+              <a href="./vista/Agenda.html"><button type="button"> Proximas Intervenciones</button></a>
+              </div>
+ </body>
+              <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
     <script src="sesion.js"></script>
 
 <!-- implemetacion de fetch -->

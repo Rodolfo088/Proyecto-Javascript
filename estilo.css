@@ -17,3 +17,22 @@ body {
 
   header {
     text-align: center; }
+
+    a [type="button"]{
+      display: grid;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    border: none;
+    background-color: #1860a8;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+      
+    }
+
+  
