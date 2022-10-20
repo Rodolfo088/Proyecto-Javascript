@@ -1,7 +1,8 @@
 let events = [];
-let arr = []; //cargar info
+let arr = []; 
 
 const eventName = document.querySelector("#eventName");
+const eventComment = document.querySelector("#eventComment");
 const eventDate = document.querySelector("#eventDate");
 const buttonAdd = document.querySelector("#bAdd");
 const eventsContainer = document.querySelector("#eventsContainer")
@@ -31,7 +32,7 @@ buttonAdd.addEventListener("click", (e) => {
 
 
 function addEvent(){
-  if (eventName.value === "" || eventDate.value === ""){
+  if (eventName.value === "" || eventComment.value === ""|| eventDate.value === ""){
     return;
   }
 
@@ -42,13 +43,16 @@ function addEvent(){
   const newEvent = {
     id: (Math.random() * 100).toString(36).slice(3),
     name: eventName.value,
+    comment: eventComment.value,
     date: eventDate.value,
+
   };
 
   events.unshift(newEvent);
  
   eventName.value = "";
-  
+  eventComment.value = "";
+
   save(JSON.stringify(events));
 
 
@@ -77,6 +81,7 @@ function renderEvents() {
             </div>
 
             <div class="event-name">${event.name}</div>
+            <div class="event-comment">${event.comment}</div>
             <div class="event-date">${event.date}</div>
             <div class="actions">
                <button class="bDelete" data-id="${
@@ -84,8 +89,7 @@ function renderEvents() {
             }">Eliminar</button></div>
         </div>
         `;
-        
-  });
+    });
 
 eventsContainer.innerHTML = eventsHTML.join("");
 document.querySelectorAll(".bDelete").forEach((button) => {
